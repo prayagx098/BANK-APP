@@ -1,0 +1,153 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+
+/* Header */
+nav{
+    width: 100%;
+}
+.navbar{
+    width: 100%;
+    height: 80px;
+}
+
+.logoContainer{
+    width: 100%;
+    display: inline-flex;
+}
+
+.logoContainer img{
+    width: 50px;
+}
+
+.logoContainer h1{
+    font-size: xx-large;
+}
+
+
+
+.btn1 {
+    padding: 10px;
+    font-size: 12px;
+    letter-spacing: 2.5px;
+    font-weight: 700;
+    color: #000;
+    background-color: #e68c1f;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 8px 15px rgba(255, 245, 155, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+  }
+  
+  .btn1:hover {
+    background-color: #bb6d0d;
+    box-shadow: 0px 15px 20px rgba(160, 177, 170, 0.4);
+    transform: translateY(-7px);
+  }
+  
+  .btn1:active {
+    transform: translateY(-1px);
+  }
+
+  .btn2 {
+    padding: 10px;
+    font-size: 12px;
+    letter-spacing: 2.5px;
+    font-weight: 700;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+  }
+  
+  .btn2:hover {
+    background-color: #394545;
+    box-shadow: 0px 15px 20px rgba(220, 233, 228, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+  
+  .btn2:active {
+    transform: translateY(-1px);
+  }
+
+
+
+  /* Content */
+  .BankingService{
+    padding: 150px;
+  }
+
+  .BankingService h3{
+    font-size: 40px;
+    font-weight: 700;
+    color: #df8618;
+  }
+
+  .BankingService p{
+    font-size: larger;
+    font-weight: 600;
+  }
+
+  .BankingService button{
+    font-size: larger;
+    font-weight: 600;
+    color: #fff;
+    background-color: #b37121;
+    box-shadow: 1px 1px 4px black;
+  }
+
+
+  .DebitCard h3{
+    font-size: 40px;
+    font-weight: 700;
+    color: #df8618;
+  }
+
+  .DebitCard p{
+    font-size: larger;
+    font-weight: 600;
+  }
+
+  .DebitCard button{
+    font-size: larger;
+    font-weight: 600;
+    color: #fff;
+    background-color: #be7b29;
+    box-shadow: 1px 1px 4px black;
+  }
+
+
+  .backgroundParallax{
+    background: url('/static/img/parallax.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    width: 100%;
+  }
+
+
+
+  /*Form  */
+
+  .loginForm{
+    background-color: #db943d;
+    color: #fff;
+    border: 0;
+    padding: 8px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: 5px;
+  }
+
+  .formName span{
+    margin-top: 50px;
+  }
