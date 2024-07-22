@@ -44,6 +44,5 @@ function withdrawBalance(){
     localStorage.setItem(Accountno, JSON.stringify(User));
 }
 function Logout(){
-    localStorage.clear();
     window.location = "./index.html"
 }
