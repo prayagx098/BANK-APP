@@ -28,12 +28,12 @@
     <nav style="position: fixed;">
         <div class="container-fluid bg-dark navbar">
             <div class="row logoContainer">
-                <div style="display: flex;" class="col-6">
+                <div style="display: flex;" class="col-12 col-md-6">
                     <img class="ms-5" src="./static/img/favicon.png" alt="">
                     <h1 class="text-white">BNB BANK</h1>
                 </div>
-                <div class="col-6 text-center">
-                    <div style="padding-left: 400px;" class="container">
+                <div class="col-12 col-md-6 text-center">
+                    <div class="container">
                         <button class="btn1" onclick="Logout()"> Logout </button>
                     </div>
                 </div>
@@ -86,17 +86,23 @@
                                     <div class="card-body">
                                       <h5 class="card-title">User Name: <span id="username"></span></h5>
                                       <p class="card-text">Account Number: <span id="accno"></span></p>
+                                      <p class="card-text">IFSC CODE: <span id="ifscc"></span></p>
                                       <p class="card-text">Mobile Number: <span id="mob"></span></p>
                                       <p class="card-text">Balance: $<span id="balance"></span></p>
                                     </div>
+                                    <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">Delete Account</button>
                                   </div>
                                 </div>
                               </div>
                         </div>
                     
                         <div id="DepositForm" class="form-container text-center">
-                            <h2 class="text-light text-center mb-5">Deposit</h2>
-                            <input style="width: 300px;" type="text" class="form-control mt-5" id="depositValue" placeholder="Enter the amount to deposit">
+                            <h2 class="text-light text-center mb-5 pt-5">Deposit</h2>
+                            <div class="input-group flex-nowrap">
+                                <span class="input-group-text" id="addon-wrapping">$</span>
+                                <input type="text" class="form-control" placeholder="Enter the amount to deposit" aria-label="Username" aria-describedby="addon-wrapping" id="depositValue">
+                            </div>
+                            <!-- <input style="width: 300px;" type="text" class="form-control mt-5" id="depositValue" placeholder="Enter the amount to deposit"> -->
                             <p class="text-center text-light" id="balanceShow"></p>
                             <button class="btn btn-success text-center" onclick="updateBalance()">Deposit</button>
 
@@ -104,8 +110,12 @@
                         </div>
 
                         <div id="WithdrawForm" class="form-container text-center">
-                            <h2 class="text-light text-center mb-5">Withdraw</h2>
-                            <input style="width: 300px;" type="text" class="form-control mt-5" id="WithdrawValue" placeholder="Enter the amount to Withdraw">
+                            <h2 class="text-light text-center mb-5 pt-5">Withdraw</h2>
+                            <div class="input-group flex-nowrap">
+                                <span class="input-group-text" id="addon-wrapping">$</span>
+                                <input type="text" class="form-control" placeholder="Enter the amount to Withdraw" aria-label="Username" aria-describedby="addon-wrapping" id="WithdrawValue">
+                            </div>
+                            <!-- <input style="width: 300px;" type="text" class="form-control mt-5" id="WithdrawValue" placeholder="Enter the amount to Withdraw"> -->
                             <p class="text-center text-light" id="balanceShow2"></p>
                             <button class="btn btn-danger text-center" onclick="withdrawBalance()">Withdraw</button>
                         </div>
@@ -115,6 +125,32 @@
             </div>
         </div>
     </div>
+
+
+    <!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Launch demo modal
+  </button> -->
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Account Deletion</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <label for="">Enter Alternative Acount Number to Transfer Your Current Balance</label>
+          <input type="text" class="form-control" id="accdelno">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-danger" onclick="deleteAccount()">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
     <!-- script -->
     <script>

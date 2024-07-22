@@ -9,6 +9,7 @@ function register(){
         firstName:firstName,
         mobileNumber:mobileNumber,
         accountNumber:accountNumber,
+        ifsc:"BNB0001",
         balance:balance,
         password:password
     }
