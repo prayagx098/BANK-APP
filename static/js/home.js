@@ -91,6 +91,9 @@ function deleteAccount(){
         TransferUser.balance = currentUserBalance + transferUserBalance;
 
         alert(`Your Amount ${currentUserBalance} has been transfered to ${TransferUser.firstName}`);
+        
+
+        localStorage.setItem(accnoDel, JSON.stringify(TransferUser));
 
         localStorage.removeItem(Accountno);
 
