@@ -1,4 +1,7 @@
+// Function to Register new user
+
 function register(){
+
     let firstName = document.getElementById('name').value;
     let mobileNumber = document.getElementById('mob').value;
     let accountNumber = document.getElementById('accountno').value;
@@ -6,26 +9,39 @@ function register(){
     let password = document.getElementById('pswd').value;
 
     User={
+
         firstName:firstName,
         mobileNumber:mobileNumber,
         accountNumber:accountNumber,
         ifsc:"BNB0001",
         balance:balance,
         password:password
+
     }
 
 
     if(firstName == "" || mobileNumber == "" || accountNumber == "" || balance == "" || password == ""){
-        alert("please fill the missing fields")
+
+        alert("please fill the missing fields");
+
     }else{
         if(accountNumber in localStorage){
+
             alert("Account Already Exist");
+
         }else{
+
             localStorage.setItem(accountNumber,JSON.stringify(User))
             alert("Account added successfully");
+
         }
     }
 }
+
+
+
+// Function to login
+
 
 function Login(){
 
@@ -36,14 +52,19 @@ function Login(){
     if(accountno in localStorage){
         let User = JSON.parse(localStorage.getItem(accountno));
         if(User.accountNumber == accountno && User.password == pswd){
+
             alert("Login successfull");
             sessionStorage.setItem('Accountno', User.accountNumber);
             window.location="./home.html"
+
         }else{
+
             alert("invalid credentials");
+
         }
     }else{
-        alert("no user found");
-    }
 
+        alert("no user found");
+
+    }
 }

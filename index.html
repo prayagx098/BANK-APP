@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <title>BNB BANK</title>
 
         <!-- Style -->
@@ -26,35 +27,58 @@
         <!-- Header -->
 
         <nav style="position: fixed;">
+
             <div class="container-fluid bg-dark navbar">
+
                 <div class="row logoContainer">
+
                     <div style="display: flex;" class="col-12 col-md-6">
+
                         <img class="ms-5" src="./static/img/favicon.png" alt="">
                         <h1 class="text-white">BNB BANK</h1>
+
                     </div>
+
                     <div class="col-12 col-md-6 text-center">
+
                         <div class="container">
+
                             <button data-bs-target="#LoginModalToggle"  data-bs-toggle="modal" class="btn1"> Login </button>
                             <button data-bs-target="#RegisterModalToggle"  data-bs-toggle="modal" class="btn2"> Register </button>
+
                         </div>
+
                     </div>
+
                 </div>
+
             </div>
+
         </nav>
         <!-- Content -->
 
         <div class="container-fluid">
+
             <div class="container BankingService">
+
                 <div class="row">
+
                     <div class="col-12 col-md-6 mt-5">
+
                         <img src="./static/img/BankingService.png" alt="">
+
                     </div>
+
                     <div class="col-12 col-md-6 mt-5 text-center">
+                        
                         <h3 class="mt-5 text-center">User-Friendly Banking Experience</h3>
                         <p class="mt-4 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, dolores ex? Fugiat nulla excepturi quos, reiciendis, dignissimos iure ea ipsam, velit suscipit nostrum possimus quam perferendis veritatis sapiente repellat officiis!</p>
                         <button class="btn text-center">Explore</button>
+
                     </div>
+
                 </div>
+
             </div>
 
 
@@ -62,61 +86,90 @@
 
             
             <div class="container mt-5 DebitCard">
+
                 <div class="row">
+
                     <div class="col-12 col-md-6 mt-5 text-center">
+
                         <h3 class="mt-5 text-center">Faster Card Transactions</h3>
                         <p class="mt-4 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, dolores ex? Fugiat nulla excepturi quos, reiciendis, dignissimos iure ea ipsam, velit suscipit nostrum possimus quam perferendis veritatis sapiente repellat officiis!</p>
                         <button class="btn text-center">Explore</button>
+
                     </div>
+
                     <div class="col-12 col-md-6 mt-5 text-center">
+
                         <img src="./static/img/debit card.png" alt="">
+
                     </div>
+
                 </div>
+
             </div>
+
         </div>
 
         <!-- Modal -->
 
-        <div class="modal fade" id="RegisterModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
-            tabindex="-1">
+        <div class="modal fade" id="RegisterModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+
             <div class="modal-dialog modal-dialog-centered">
+
                 <div class="modal-content bg-dark">
 
                         <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
 
                         <div class="modal-body text-center">
+
                             <h1 class="text-center text-white mb-5">REGISTER</h1>
 
                             <div class="row">
+
                                 <div class="col-6 text-start formName">
+
                                     <span style="color: aliceblue;">NAME</span><br><br>
                                     <span style="color: aliceblue;">MOBILE</span><br><br>
                                     <span style="color: aliceblue;">ACC.NO</span><br><br>
                                     <span style="color: aliceblue;">AMOUNT</span><br><br>
                                     <span style="color: aliceblue;">PASSWORD</span><br><br>
+
                                 </div>
+
                                 <div class="col-6">
+
                                     <input type="text" class="form-control mb-2" placeholder="First Name" id="name">
                                     <input type="text" class="form-control mb-2" placeholder="000 000 0000" id="mob">
                                     <input type="text" class="form-control mb-2" placeholder="00000" id="accountno">
                                     <input type="text" class="form-control mb-2" placeholder="Rs" id="balance">
                                     <input type="password" class="form-control mb-1" placeholder="*******" id="pswd">
+
                                 </div>
+
                             </div>
+
                         </div>
 
                     <div class="modal-footer">
+
                         <button class="loginForm" data-bs-target="#LoginModalToggle" data-bs-toggle="modal" onclick="register()">Register</button>
+                    
                     </div>
                 </div>
+
             </div>
+
         </div>
 
         <div class="modal fade" id="LoginModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+
             <div class="modal-dialog modal-dialog-centered">
+
                 <div class="modal-content bg-dark">
+
                         <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+
                     <div class="modal-body text-center">
+
                         <h1 class="text-center text-white mb-5">LOGIN</h1>
                         <label style="display: inline-flex;" for="name">
                             <span style="color: aliceblue;">ACCO.NAME</span>
@@ -126,14 +179,19 @@
                             <span style="color: aliceblue;">PASSWORD</span>
                             <input type="password" id="password" class="form-control ms-5" placeholder="*******">
                         </label>
+
                     </div>
+
                     <div class="modal-footer">
 
                         <button class="loginForm" onclick="Login()"> Login </button>
 
                     </div>
+
                 </div>
+
             </div>
+            
         </div>
 
 

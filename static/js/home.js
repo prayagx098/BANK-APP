@@ -1,3 +1,5 @@
+// Function to fetch Profile
+
 function fetchProfile(){
     let Accountno = sessionStorage.getItem('Accountno');
     let User = JSON.parse(localStorage.getItem(Accountno));
@@ -9,6 +11,8 @@ function fetchProfile(){
     document.getElementById('balance').textContent = User.balance ? User.balance : "nill";
 }
 
+
+// Function to update Balance
 
 function updateBalance(){
 
@@ -25,7 +29,6 @@ function updateBalance(){
 
         let pastBal = parseFloat(User.balance);
 
-
         let addAmount = parseFloat(Uptamount);
     
         User.balance = pastBal + addAmount;
@@ -33,20 +36,18 @@ function updateBalance(){
         balanceShow.innerHTML =   ` your Previous Balance was $ ${pastBal} and Current Balance is :${User.balance}`;
     
         localStorage.setItem(Accountno, JSON.stringify(User));
+
     }
-
-
-
-
 }
+
+
+// Function To withdraw balance
 
 function withdrawBalance(){
 
 
     let Accountno = sessionStorage.getItem('Accountno');
     let User = JSON.parse(localStorage.getItem(Accountno));
-
-
     let Uptamount = WithdrawValue.value;
 
     if(Uptamount == ''){
@@ -57,7 +58,6 @@ function withdrawBalance(){
 
         let pastBal = parseFloat(User.balance);
 
-
         let addAmount = parseFloat(Uptamount);
     
         User.balance = pastBal - addAmount;
@@ -65,11 +65,13 @@ function withdrawBalance(){
         balanceShow2.innerHTML =   ` your Previous Balance was $ ${pastBal} and Current Balance is :${User.balance}`;
     
         localStorage.setItem(Accountno, JSON.stringify(User));
+
     }
-
-
-
 }
+
+
+// Function to Delete Account and transfer money to a new account
+
 
 function deleteAccount(){
 
@@ -79,12 +81,14 @@ function deleteAccount(){
     accnoDel = accdelno.value;
 
     if(accnoDel == '' || !localStorage.getItem(accnoDel)){
+
         alert("Alternative Account not Found");
+
     }else{
+
         let TransferUser = JSON.parse(localStorage.getItem(accnoDel));
 
         let currentUserBalance = parseFloat(User.balance);
-
 
         let transferUserBalance = parseFloat(TransferUser.balance);
 
@@ -92,17 +96,19 @@ function deleteAccount(){
 
         alert(`Your Amount ${currentUserBalance} has been transfered to ${TransferUser.firstName}`);
         
-
         localStorage.setItem(accnoDel, JSON.stringify(TransferUser));
 
         localStorage.removeItem(Accountno);
 
         window.location = "./index.html"
 
-
     }
 }
 
+// Function to logout
+
 function Logout(){
+
     window.location = "./index.html"
+
 }
